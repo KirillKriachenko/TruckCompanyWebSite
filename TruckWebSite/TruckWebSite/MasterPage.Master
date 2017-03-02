@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="TruckWebSite.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="App_Themes/StyleSheet/StyleMaterPage.css" rel="stylesheet" />
+    <title>Master Page</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="topContent">
+            <a href="Default.aspx">Header</a>
+        </div>
+        <div id="menu" runat="server">
+            <a href="Default.aspx">Menu</a>
+        </div>
+        <div id="mainContent">
+            <asp:ContentPlaceHolder ID="body" runat="server">
+                <a href="Default.aspx">Main Content</a>
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="footerContent">
+            <a href="Default.aspx">footer</a>
+        </div>
+    </form>
+</body>
+</html>
