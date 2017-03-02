@@ -5,17 +5,37 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link href="App_Themes/StyleSheet/StyleMaterPage.css" rel="stylesheet" />
+    <link href="App_Themes/StyleSheet/menu.css" rel="stylesheet" />
     <title>Master Page</title>
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
         <div id="topContent">
-            <a href="Default.aspx">Header</a>
+            <asp:Image ID="headerimage" runat="server" ImageUrl="~/Pictures/Header.PNG" />
+            
         </div>
         <div id="menu" runat="server">
-            <a href="Default.aspx">Menu</a>
+            <div id="mbmcpebul_wrapper" style="max-width: 231px;">
+                <ul id="mbmcpebul_table" class="mbmcpebul_menulist css_menu">
+                    <li>
+                        <div class="buttonbg"><a>Home</a></div>
+                    </li>
+                    <li>
+                        <div class="arrow buttonbg" style="width: 94px;"><a class="button_2">Products</a></div>
+                        <ul>
+                            <li><a title="">Menu Item</a></li>
+                            <li><a title="">Another Menu Item</a></li>
+                            <li><a title="">Yet Another</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="buttonbg" style="width: 74px;"><a>Support</a></div>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div id="mainContent">
             <asp:ContentPlaceHolder ID="body" runat="server">

@@ -9,8 +9,21 @@
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
-  
 }
+
+/*#loginButton {
+    color: #fff200;
+    padding: 8px 22px 8px 37px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    /*background: url(/sites/all/themes/omega_truckandtrailer/images/lock.png) no-repeat 14px center;*/
+    text-transform: uppercase;
+    background-color: #2a2627;
+    text-decoration: none;
+    margin-top: 15px;
+    float: right;
+}*/
 
 #footerContent {
     float: left;
@@ -27,7 +40,7 @@
 }
 
 #mainContent {
-    background-color:white;
+    background-color: white;
     color: blue;
     float: left;
     width: 100%;
@@ -51,5 +64,5 @@
 }
 
 div {
-        display: block;
+    display: block;
 }
