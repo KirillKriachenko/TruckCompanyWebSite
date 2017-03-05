@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/" title="Root" description="Root">
+    <siteMapNode url="~/Default.aspx" title="Home"/>
+    <siteMapNode url="~/HelpDesk.aspx" title="Help Desk"/>
+    <siteMapNode url="~/EmployeeDirectory.aspx" title="Employee Directory"/>
+    <siteMapNode  title="Address Book">
+      <!-- the sub menus-->
+      <siteMapNode url="~/Staff.aspx" title="Staff"/>
+      <siteMapNode url="~/Others.aspx" title="Others"/>
+      <!--end sub menus-->
+    </siteMapNode>
+    <siteMapNode url="~/Departments.aspx" title="Departments"/>
+    <siteMapNode url="~/AdminTools.aspx" title="Admin Tools"/>
+    <siteMapNode url="~/AdminNewsletter.aspx" title="Admin Newsletter"/>
+  </siteMapNode>
+</siteMap>

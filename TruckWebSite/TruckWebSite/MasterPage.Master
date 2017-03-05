@@ -14,34 +14,20 @@
 <body>
     <form id="form1" runat="server">
         <div id="topContent">
-            <asp:Image ID="headerimage" runat="server" ImageUrl="~/Pictures/Header.PNG" />
+            <asp:Image ID="headerimage" runat="server" ImageUrl="~/Pictures/logo.PNG" Height="50px" Width="120px" />
             
         </div>
         <div id="menu" runat="server">
-            <div id="mbmcpebul_wrapper" style="max-width: 231px;">
-                <ul id="mbmcpebul_table" class="mbmcpebul_menulist css_menu">
-                    <li>
-                        <div class="buttonbg"><a>Home</a></div>
-                    </li>
-                    <li>
-                        <div class="arrow buttonbg" style="width: 94px;"><a class="button_2">Products</a></div>
-                        <ul>
-                            <li><a title="">Menu Item</a></li>
-                            <li><a title="">Another Menu Item</a></li>
-                            <li><a title="">Yet Another</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="buttonbg" style="width: 74px;"><a>Support</a></div>
-                    </li>
-                </ul>
-            </div>
+           
+            <asp:Menu ID="MainMenu" runat="server" DataSourceID="sitemap" Orientation="Horizontal"></asp:Menu>
+            <asp:SiteMapDataSource ID="sitemap" runat="server" />
         </div>
         <div id="mainContent">
             <asp:ContentPlaceHolder ID="body" runat="server">
                 <a href="Default.aspx">Main Content</a>
             </asp:ContentPlaceHolder>
         </div>
+
         <div id="footerContent">
             <a href="Default.aspx">footer</a>
         </div>

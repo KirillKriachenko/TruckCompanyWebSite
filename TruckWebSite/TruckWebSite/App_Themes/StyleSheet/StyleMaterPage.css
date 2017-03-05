@@ -1,68 +1,24 @@
 ﻿#topContent {
-    color: #000;
-    background-color: #fff200;
-    float: left;
-    width: 100%;
+    
+    background-color: #146f77;
     margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+    padding: 50px;
 }
 
-/*#loginButton {
-    color: #fff200;
-    padding: 8px 22px 8px 37px;
-    border-radius: 4px;
-    font-size: 13px;
-    font-weight: 600;
-    /*background: url(/sites/all/themes/omega_truckandtrailer/images/lock.png) no-repeat 14px center;*/
-    text-transform: uppercase;
-    background-color: #2a2627;
-    text-decoration: none;
-    margin-top: 15px;
-    float: right;
-}*/
-
-#footerContent {
-    float: left;
-    width: 100%;
-    clear: both;
-    background-color: #231f20;
-    padding: 30px 0px 33px 0px;
-    display: block;
+#menu{
+    background: #303030;
     margin: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
 }
-
 #mainContent {
-    background-color: white;
-    color: blue;
-    float: left;
-    width: 100%;
-    font-weight: 700;
-    min-height: 50px;
+    background: #F0F0F0;
+    border: 1px solid #CCC;
+    height: 2000px;
+    margin: 20px auto;
+}
+#footerContent {
+    background: #303030;
+    padding: 10px;
+    text-align: center;
 }
 
-#menu {
-    background-color: #231f20;
-    color: #fff;
-    float: left;
-    width: 100%;
-    font-weight: 700;
-    min-height: 50px;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
 
-div {
-    display: block;
-}

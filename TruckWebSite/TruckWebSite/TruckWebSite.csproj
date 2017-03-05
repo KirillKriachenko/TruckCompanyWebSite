@@ -94,7 +94,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Themes\StyleSheet\menu.css" />
     <Content Include="App_Themes\StyleSheet\StyleMaterPage.css" />
     <Content Include="Default.aspx" />
     <Content Include="packages.config" />
@@ -102,6 +101,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="MasterPage.Master" />
+    <Content Include="Web.sitemap" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -111,6 +111,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Pictures\Header.PNG" />
+    <Content Include="Pictures\logo.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
