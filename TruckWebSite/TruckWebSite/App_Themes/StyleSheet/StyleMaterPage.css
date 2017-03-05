@@ -1,0 +1,24 @@
+﻿#topContent {
+    
+    background-color: #146f77;
+    margin: 0;
+    padding: 50px;
+}
+
+#menu{
+    background: #303030;
+    margin: 0;
+}
+#mainContent {
+    background: #F0F0F0;
+    border: 1px solid #CCC;
+    height: 2000px;
+    margin: 20px auto;
+}
+#footerContent {
+    background: #303030;
+    padding: 10px;
+    text-align: center;
+}
+
+
