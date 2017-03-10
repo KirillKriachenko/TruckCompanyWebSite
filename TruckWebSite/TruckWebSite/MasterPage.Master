@@ -27,7 +27,6 @@
                 <a href="Default.aspx">Main Content</a>
             </asp:ContentPlaceHolder>
         </div>
-
         <div id="footerContent">
             <a href="Default.aspx">footer</a>
         </div>

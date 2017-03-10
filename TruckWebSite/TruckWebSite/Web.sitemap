@@ -5,6 +5,7 @@
     <siteMapNode url="~/HelpDesk.aspx" title="Help Desk"/>
     <siteMapNode url="~/EmployeeDirectory.aspx" title="Employee Directory"/>
     <siteMapNode  title="Address Book">
+    <siteMapNode url="~/Pages/Map.aspx" title="Map"/>
       <!-- the sub menus-->
       <siteMapNode url="~/Staff.aspx" title="Staff"/>
       <siteMapNode url="~/Others.aspx" title="Others"/>
