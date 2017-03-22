@@ -13,6 +13,15 @@ namespace TruckWebSite.Pages {
     public partial class JobPage {
         
         /// <summary>
+        /// Panel2 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel2;
+        
+        /// <summary>
         /// joBTitle_linkBtn элемент управления.
         /// </summary>
         /// <remarks>
