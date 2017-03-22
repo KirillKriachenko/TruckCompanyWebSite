@@ -43,17 +43,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GMap.NET.Core, Version=1.7.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Bin\GMap.NET.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="GMap.NET.WindowsForms, Version=1.7.0.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Bin\GMap.NET.WindowsForms.dll</HintPath>
-    </Reference>
-    <Reference Include="GMaps">
-      <HintPath>map\GMaps.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -105,19 +94,17 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Themes\StyleSheet\font-awesome.css" />
+    <Content Include="App_Themes\StyleSheet\font-awesome.min.css" />
     <Content Include="App_Themes\StyleSheet\StyleMaterPage.css" />
-    <Content Include="Artem.Google.pdb" />
-    <Content Include="Artem.Google.XML" />
     <Content Include="Default.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="MasterPage.Master" />
-    <Content Include="Pages\JobPage.aspx" />
-    <Content Include="Pages\Map.aspx" />
-    <Content Include="Pictures\DanadaMap.png" />
-    <Content Include="Pictures\DanadaMap2.png" />
+    <Content Include="Pictures\background.jpg" />
+    <Content Include="Pictures\Content-Image.jpg" />
     <Content Include="Web.sitemap" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -145,20 +132,6 @@
     </Compile>
     <Compile Include="MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\JobPage.aspx.cs">
-      <DependentUpon>JobPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\JobPage.aspx.designer.cs">
-      <DependentUpon>JobPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Map.aspx.cs">
-      <DependentUpon>Map.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\Map.aspx.designer.cs">
-      <DependentUpon>Map.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

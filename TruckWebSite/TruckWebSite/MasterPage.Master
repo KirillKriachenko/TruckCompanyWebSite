@@ -1,13 +1,28 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="TruckWebSite.MasterPage" %>
 
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link href="App_Themes/StyleSheet/StyleMaterPage.css" rel="stylesheet" />
-    <link href="App_Themes/StyleSheet/menu.css" rel="stylesheet" />
-    <title>Master Page</title>
 
+    <%--start declaretion bootstrap--%>
+    <%--   <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>--%>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <%--end declaretion bootstrap--%>
+    <link href="App_Themes/StyleSheet/StyleMaterPage.css" type="text/css" rel="stylesheet" />
+    <link href="App_Themes/StyleSheet/font-awesome.css" rel="stylesheet" />
+    <link href="App_Themes/StyleSheet/font-awesome.min.css" rel="stylesheet" />
+    <title>Master Page</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -15,20 +30,36 @@
     <form id="form1" runat="server">
         <div id="topContent">
             <asp:Image ID="headerimage" runat="server" ImageUrl="~/Pictures/logo.PNG" Height="50px" Width="120px" />
-            
+
         </div>
-        <div id="menu" runat="server">
-           
-            <asp:Menu ID="MainMenu" runat="server" DataSourceID="sitemap" Orientation="Horizontal"></asp:Menu>
-            <asp:SiteMapDataSource ID="sitemap" runat="server" />
-        </div>
+
+        <nav role="navigation" class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand">Truck Company S.A.</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Solution</a></li>
+                    <li><a href="#">Coverage Area</a></li>
+                    <li><a href="#">About US</a></li>
+                    <li><a href="#">Job Oportunities</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
         <div id="mainContent">
             <asp:ContentPlaceHolder ID="body" runat="server">
                 <a href="Default.aspx">Main Content</a>
             </asp:ContentPlaceHolder>
+            <img src="/Pictures/background.jpg" class="img-rounded" alt="Cinque Terre" />
         </div>
+
         <div id="footerContent">
-            <a href="Default.aspx">footer</a>
+
+            <div class="block__content">
+                ©2017 Centennial College.&nbsp; 
+            </div>
         </div>
     </form>
 </body>
