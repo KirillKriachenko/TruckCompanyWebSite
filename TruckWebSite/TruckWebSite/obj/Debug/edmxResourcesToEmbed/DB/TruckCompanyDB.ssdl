@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TruckCompanyDB.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="TruckCompanyDBStoreContainer">
+    <EntitySet Name="CarSet" EntityType="TruckCompanyDB.Store.CarSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BrancheSet" EntityType="TruckCompanyDB.Store.BrancheSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmployeeSet" EntityType="TruckCompanyDB.Store.EmployeeSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ScheduleSet" EntityType="TruckCompanyDB.Store.ScheduleSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="JobSet" EntityType="TruckCompanyDB.Store.JobSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServiceSet" EntityType="TruckCompanyDB.Store.ServiceSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ServiceHistorySet" EntityType="TruckCompanyDB.Store.ServiceHistorySet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CustomerSet" EntityType="TruckCompanyDB.Store.CustomerSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="BrancheCar" Association="TruckCompanyDB.Store.BrancheCar">
+      <End Role="Branche" EntitySet="BrancheSet" />
+      <End Role="Car" EntitySet="CarSet" />
+    </AssociationSet>
+    <AssociationSet Name="BrancheEmployee" Association="TruckCompanyDB.Store.BrancheEmployee">
+      <End Role="Branche" EntitySet="BrancheSet" />
+      <End Role="Employee" EntitySet="EmployeeSet" />
+    </AssociationSet>
+    <AssociationSet Name="EmployeeSchedule" Association="TruckCompanyDB.Store.EmployeeSchedule">
+      <End Role="Employee" EntitySet="EmployeeSet" />
+      <End Role="Schedule" EntitySet="ScheduleSet" />
+    </AssociationSet>
+    <AssociationSet Name="EmployeeJob" Association="TruckCompanyDB.Store.EmployeeJob">
+      <End Role="Employee" EntitySet="EmployeeSet" />
+      <End Role="Job" EntitySet="JobSet" />
+    </AssociationSet>
+    <AssociationSet Name="ServiceCar" Association="TruckCompanyDB.Store.ServiceCar">
+      <End Role="Service" EntitySet="ServiceSet" />
+      <End Role="Car" EntitySet="CarSet" />
+    </AssociationSet>
+    <AssociationSet Name="ServiceServiceHistory" Association="TruckCompanyDB.Store.ServiceServiceHistory">
+      <End Role="Service" EntitySet="ServiceSet" />
+      <End Role="ServiceHistory" EntitySet="ServiceHistorySet" />
+    </AssociationSet>
+    <AssociationSet Name="CustomerService" Association="TruckCompanyDB.Store.CustomerService">
+      <End Role="Customer" EntitySet="CustomerSet" />
+      <End Role="Service" EntitySet="ServiceSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CarSet">
+    <Key>
+      <PropertyRef Name="CarId" />
+    </Key>
+    <Property Name="CarId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Brand" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Year" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Kilometrs" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Plate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Photo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="BrancheBrancheId" Type="int" Nullable="false" />
+    <Property Name="ServiceServiceId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BrancheSet">
+    <Key>
+      <PropertyRef Name="BrancheId" />
+    </Key>
+    <Property Name="BrancheId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Location" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Capacity" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeeSet">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Name="EmployeeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Birthday" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="BrancheBrancheId" Type="int" Nullable="false" />
+    <Property Name="Schedule_ScheduleId" Type="int" Nullable="false" />
+    <Property Name="Job_JobId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ScheduleSet">
+    <Key>
+      <PropertyRef Name="ScheduleId" />
+    </Key>
+    <Property Name="ScheduleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WorkTime" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Date" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="JobSet">
+    <Key>
+      <PropertyRef Name="JobId" />
+    </Key>
+    <Property Name="JobId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobTitle" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Salary" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StartDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EndDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Open" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ServiceSet">
+    <Key>
+      <PropertyRef Name="ServiceId" />
+    </Key>
+    <Property Name="ServiceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServieType" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CustomerCustomerId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ServiceHistorySet">
+    <Key>
+      <PropertyRef Name="ServiceHistoryId" />
+    </Key>
+    <Property Name="ServiceHistoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Value" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StartDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EndDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ServiceServiceId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CustomerSet">
+    <Key>
+      <PropertyRef Name="CustomerId" />
+    </Key>
+    <Property Name="CustomerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Birthday" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="BrancheCar">
+    <End Role="Branche" Type="TruckCompanyDB.Store.BrancheSet" Multiplicity="1" />
+    <End Role="Car" Type="TruckCompanyDB.Store.CarSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Branche">
+        <PropertyRef Name="BrancheId" />
+      </Principal>
+      <Dependent Role="Car">
+        <PropertyRef Name="BrancheBrancheId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BrancheEmployee">
+    <End Role="Branche" Type="TruckCompanyDB.Store.BrancheSet" Multiplicity="1" />
+    <End Role="Employee" Type="TruckCompanyDB.Store.EmployeeSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Branche">
+        <PropertyRef Name="BrancheId" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="BrancheBrancheId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EmployeeSchedule">
+    <End Role="Employee" Type="TruckCompanyDB.Store.EmployeeSet" Multiplicity="*" />
+    <End Role="Schedule" Type="TruckCompanyDB.Store.ScheduleSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Schedule">
+        <PropertyRef Name="ScheduleId" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="Schedule_ScheduleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EmployeeJob">
+    <End Role="Employee" Type="TruckCompanyDB.Store.EmployeeSet" Multiplicity="*" />
+    <End Role="Job" Type="TruckCompanyDB.Store.JobSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Job">
+        <PropertyRef Name="JobId" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="Job_JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ServiceCar">
+    <End Role="Service" Type="TruckCompanyDB.Store.ServiceSet" Multiplicity="1" />
+    <End Role="Car" Type="TruckCompanyDB.Store.CarSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="ServiceId" />
+      </Principal>
+      <Dependent Role="Car">
+        <PropertyRef Name="ServiceServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ServiceServiceHistory">
+    <End Role="Service" Type="TruckCompanyDB.Store.ServiceSet" Multiplicity="1" />
+    <End Role="ServiceHistory" Type="TruckCompanyDB.Store.ServiceHistorySet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="ServiceId" />
+      </Principal>
+      <Dependent Role="ServiceHistory">
+        <PropertyRef Name="ServiceServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CustomerService">
+    <End Role="Customer" Type="TruckCompanyDB.Store.CustomerSet" Multiplicity="1" />
+    <End Role="Service" Type="TruckCompanyDB.Store.ServiceSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="CustomerId" />
+      </Principal>
+      <Dependent Role="Service">
+        <PropertyRef Name="CustomerCustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

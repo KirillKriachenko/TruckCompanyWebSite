@@ -65,3 +65,6 @@ D:\GitProjects\TruckCompanyWebSite\TruckCompanyWebSite\TruckWebSite\TruckWebSite
 D:\GitProjects\TruckCompanyWebSite\TruckCompanyWebSite\TruckWebSite\TruckWebSite\bin\Microsoft.ApplicationInsights.xml
 D:\GitProjects\TruckCompanyWebSite\TruckCompanyWebSite\TruckWebSite\TruckWebSite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\GitProjects\TruckCompanyWebSite\TruckCompanyWebSite\TruckWebSite\TruckWebSite\bin\GMaps.dll
+D:\GitProjects\TruckCompanyWebSite\TruckCompanyWebSite\TruckWebSite\TruckWebSite\bin\EntityFramework.dll
+D:\GitProjects\TruckCompanyWebSite\TruckCompanyWebSite\TruckWebSite\TruckWebSite\bin\EntityFramework.xml
+D:\GitProjects\TruckCompanyWebSite\TruckCompanyWebSite\TruckWebSite\TruckWebSite\bin\ru\EntityFramework.resources.dll

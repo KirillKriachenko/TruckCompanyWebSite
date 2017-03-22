@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="TruckCompanyDB" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="TruckCompanyDBContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CarSet" EntityType="TruckCompanyDB.Car" />
+    <EntitySet Name="BrancheSet" EntityType="TruckCompanyDB.Branche" />
+    <AssociationSet Name="BrancheCar" Association="TruckCompanyDB.BrancheCar">
+      <End Role="Branche" EntitySet="BrancheSet" />
+      <End Role="Car" EntitySet="CarSet" />
+    </AssociationSet>
+    <EntitySet Name="EmployeeSet" EntityType="TruckCompanyDB.Employee" />
+    <AssociationSet Name="BrancheEmployee" Association="TruckCompanyDB.BrancheEmployee">
+      <End Role="Branche" EntitySet="BrancheSet" />
+      <End Role="Employee" EntitySet="EmployeeSet" />
+    </AssociationSet>
+    <EntitySet Name="ScheduleSet" EntityType="TruckCompanyDB.Schedule" />
+    <AssociationSet Name="EmployeeSchedule" Association="TruckCompanyDB.EmployeeSchedule">
+      <End Role="Employee" EntitySet="EmployeeSet" />
+      <End Role="Schedule" EntitySet="ScheduleSet" />
+    </AssociationSet>
+    <EntitySet Name="JobSet" EntityType="TruckCompanyDB.Job" />
+    <AssociationSet Name="EmployeeJob" Association="TruckCompanyDB.EmployeeJob">
+      <End Role="Employee" EntitySet="EmployeeSet" />
+      <End Role="Job" EntitySet="JobSet" />
+    </AssociationSet>
+    <EntitySet Name="ServiceSet" EntityType="TruckCompanyDB.Service" />
+    <AssociationSet Name="ServiceCar" Association="TruckCompanyDB.ServiceCar">
+      <End Role="Service" EntitySet="ServiceSet" />
+      <End Role="Car" EntitySet="CarSet" />
+    </AssociationSet>
+    <EntitySet Name="ServiceHistorySet" EntityType="TruckCompanyDB.ServiceHistory" />
+    <AssociationSet Name="ServiceServiceHistory" Association="TruckCompanyDB.ServiceServiceHistory">
+      <End Role="Service" EntitySet="ServiceSet" />
+      <End Role="ServiceHistory" EntitySet="ServiceHistorySet" />
+    </AssociationSet>
+    <EntitySet Name="CustomerSet" EntityType="TruckCompanyDB.Customer" />
+    <AssociationSet Name="CustomerService" Association="TruckCompanyDB.CustomerService">
+      <End Role="Customer" EntitySet="CustomerSet" />
+      <End Role="Service" EntitySet="ServiceSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Car">
+    <Key>
+      <PropertyRef Name="CarId" />
+    </Key>
+    <Property Name="CarId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" Nullable="false" />
+    <Property Name="Brand" Type="String" Nullable="false" />
+    <Property Name="Year" Type="String" Nullable="false" />
+    <Property Name="Kilometrs" Type="String" Nullable="false" />
+    <Property Name="Plate" Type="String" Nullable="false" />
+    <Property Name="Photo" Type="String" Nullable="false" />
+    <NavigationProperty Name="Branche" Relationship="TruckCompanyDB.BrancheCar" FromRole="Car" ToRole="Branche" />
+    <Property Name="BrancheBrancheId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Service" Relationship="TruckCompanyDB.ServiceCar" FromRole="Car" ToRole="Service" />
+    <Property Name="ServiceServiceId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Branche">
+    <Key>
+      <PropertyRef Name="BrancheId" />
+    </Key>
+    <Property Name="BrancheId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Location" Type="String" Nullable="false" />
+    <Property Name="Address" Type="String" Nullable="false" />
+    <Property Name="Capacity" Type="String" Nullable="false" />
+    <NavigationProperty Name="Car" Relationship="TruckCompanyDB.BrancheCar" FromRole="Branche" ToRole="Car" />
+    <NavigationProperty Name="Employee" Relationship="TruckCompanyDB.BrancheEmployee" FromRole="Branche" ToRole="Employee" />
+  </EntityType>
+  <Association Name="BrancheCar">
+    <End Type="TruckCompanyDB.Branche" Role="Branche" Multiplicity="1" />
+    <End Type="TruckCompanyDB.Car" Role="Car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Branche">
+        <PropertyRef Name="BrancheId" />
+      </Principal>
+      <Dependent Role="Car">
+        <PropertyRef Name="BrancheBrancheId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Name="EmployeeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="LastName" Type="String" Nullable="false" />
+    <Property Name="Birthday" Type="String" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" Nullable="false" />
+    <Property Name="Address" Type="String" Nullable="false" />
+    <NavigationProperty Name="Branche" Relationship="TruckCompanyDB.BrancheEmployee" FromRole="Employee" ToRole="Branche" />
+    <Property Name="BrancheBrancheId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Schedule" Relationship="TruckCompanyDB.EmployeeSchedule" FromRole="Employee" ToRole="Schedule" />
+    <NavigationProperty Name="Job" Relationship="TruckCompanyDB.EmployeeJob" FromRole="Employee" ToRole="Job" />
+  </EntityType>
+  <Association Name="BrancheEmployee">
+    <End Type="TruckCompanyDB.Branche" Role="Branche" Multiplicity="1" />
+    <End Type="TruckCompanyDB.Employee" Role="Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Branche">
+        <PropertyRef Name="BrancheId" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="BrancheBrancheId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Schedule">
+    <Key>
+      <PropertyRef Name="ScheduleId" />
+    </Key>
+    <Property Name="ScheduleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WorkTime" Type="String" Nullable="false" />
+    <Property Name="Date" Type="String" Nullable="false" />
+    <NavigationProperty Name="Employee" Relationship="TruckCompanyDB.EmployeeSchedule" FromRole="Schedule" ToRole="Employee" />
+  </EntityType>
+  <Association Name="EmployeeSchedule">
+    <End Type="TruckCompanyDB.Employee" Role="Employee" Multiplicity="1" />
+    <End Type="TruckCompanyDB.Schedule" Role="Schedule" Multiplicity="1" />
+  </Association>
+  <EntityType Name="Job">
+    <Key>
+      <PropertyRef Name="JobId" />
+    </Key>
+    <Property Name="JobId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JobTitle" Type="String" Nullable="false" />
+    <Property Name="Description" Type="String" Nullable="false" />
+    <Property Name="Salary" Type="String" Nullable="false" />
+    <Property Name="StartDate" Type="String" Nullable="false" />
+    <Property Name="EndDate" Type="String" Nullable="false" />
+    <Property Name="Open" Type="String" Nullable="false" />
+    <NavigationProperty Name="Employee" Relationship="TruckCompanyDB.EmployeeJob" FromRole="Job" ToRole="Employee" />
+  </EntityType>
+  <Association Name="EmployeeJob">
+    <End Type="TruckCompanyDB.Employee" Role="Employee" Multiplicity="1" />
+    <End Type="TruckCompanyDB.Job" Role="Job" Multiplicity="1" />
+  </Association>
+  <EntityType Name="Service">
+    <Key>
+      <PropertyRef Name="ServiceId" />
+    </Key>
+    <Property Name="ServiceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServieType" Type="String" Nullable="false" />
+    <NavigationProperty Name="Car" Relationship="TruckCompanyDB.ServiceCar" FromRole="Service" ToRole="Car" />
+    <NavigationProperty Name="ServiceHistory" Relationship="TruckCompanyDB.ServiceServiceHistory" FromRole="Service" ToRole="ServiceHistory" />
+    <NavigationProperty Name="Customer" Relationship="TruckCompanyDB.CustomerService" FromRole="Service" ToRole="Customer" />
+    <Property Name="CustomerCustomerId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="ServiceCar">
+    <End Type="TruckCompanyDB.Service" Role="Service" Multiplicity="1" />
+    <End Type="TruckCompanyDB.Car" Role="Car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="ServiceId" />
+      </Principal>
+      <Dependent Role="Car">
+        <PropertyRef Name="ServiceServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ServiceHistory">
+    <Key>
+      <PropertyRef Name="ServiceHistoryId" />
+    </Key>
+    <Property Name="ServiceHistoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Value" Type="String" Nullable="false" />
+    <Property Name="StartDate" Type="String" Nullable="false" />
+    <Property Name="EndDate" Type="String" Nullable="false" />
+    <NavigationProperty Name="Service" Relationship="TruckCompanyDB.ServiceServiceHistory" FromRole="ServiceHistory" ToRole="Service" />
+    <Property Name="ServiceServiceId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="ServiceServiceHistory">
+    <End Type="TruckCompanyDB.Service" Role="Service" Multiplicity="1" />
+    <End Type="TruckCompanyDB.ServiceHistory" Role="ServiceHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="ServiceId" />
+      </Principal>
+      <Dependent Role="ServiceHistory">
+        <PropertyRef Name="ServiceServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerId" />
+    </Key>
+    <Property Name="CustomerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="LastName" Type="String" Nullable="false" />
+    <Property Name="Birthday" Type="String" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" Nullable="false" />
+    <Property Name="Address" Type="String" Nullable="false" />
+    <NavigationProperty Name="Service" Relationship="TruckCompanyDB.CustomerService" FromRole="Customer" ToRole="Service" />
+  </EntityType>
+  <Association Name="CustomerService">
+    <End Type="TruckCompanyDB.Customer" Role="Customer" Multiplicity="1" />
+    <End Type="TruckCompanyDB.Service" Role="Service" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="CustomerId" />
+      </Principal>
+      <Dependent Role="Service">
+        <PropertyRef Name="CustomerCustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
