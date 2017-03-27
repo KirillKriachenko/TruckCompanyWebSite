@@ -7,18 +7,13 @@
 <head runat="server">
 
     <%--start declaretion bootstrap--%>
-    <%--   <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>--%>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <%--end declaretion bootstrap--%>
+
     <link href="App_Themes/StyleSheet/StyleMaterPage.css" type="text/css" rel="stylesheet" />
     <link href="App_Themes/StyleSheet/font-awesome.css" rel="stylesheet" />
     <link href="App_Themes/StyleSheet/font-awesome.min.css" rel="stylesheet" />
@@ -29,23 +24,28 @@
 <body>
     <form id="form1" runat="server">
         <div id="topContent">
-            <asp:Image ID="headerimage" runat="server" ImageUrl="~/Pictures/logo.PNG" Height="50px" Width="120px" />
-
+            <asp:Image ID="headerimage" runat="server" ImageUrl="~/Pictures/logo.gif" Height="50px" Width="120px" />
         </div>
-
         <nav role="navigation" class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
                     <a href="#" class="navbar-brand">Truck Company S.A.</a>
                 </div>
-                <ul class="nav navbar-nav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Solution</a></li>
-                    <li><a href="#">Coverage Area</a></li>
-                    <li><a href="#">About US</a></li>
-                    <li><a href="#">Job Oportunities</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Solution</a></li>
+                        <li><a href="#">Coverage Area</a></li>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="Pages/JobPage.aspx">Job Oportunities</a></li>
+                        <li><a href="Pages/JobPage.aspx">Contact</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <div id="mainContent">
@@ -53,10 +53,9 @@
                 <a href="Default.aspx">Main Content</a>
             </asp:ContentPlaceHolder>
             <img src="/Pictures/background.jpg" class="img-rounded" alt="Cinque Terre" />
+            <asp:Image ID="Image1" runat="server" ImageUrl="Pictures/trucksBotton.jpg" />
         </div>
-
         <div id="footerContent">
-
             <div class="block__content">
                 ©2017 Centennial College.&nbsp; 
             </div>

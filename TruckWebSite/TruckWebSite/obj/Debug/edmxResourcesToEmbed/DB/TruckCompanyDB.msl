@@ -44,8 +44,9 @@
       <EntityTypeMapping TypeName="IsTypeOf(TruckCompanyDB.Schedule)">
         <MappingFragment StoreEntitySet="ScheduleSet">
           <ScalarProperty Name="ScheduleId" ColumnName="ScheduleId" />
-          <ScalarProperty Name="WorkTime" ColumnName="WorkTime" />
           <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -57,8 +58,8 @@
           <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="Salary" ColumnName="Salary" />
           <ScalarProperty Name="StartDate" ColumnName="StartDate" />
-          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
           <ScalarProperty Name="Open" ColumnName="Open" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

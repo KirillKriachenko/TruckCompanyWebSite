@@ -22,7 +22,7 @@
             <asp:ListItem></asp:ListItem>
             <asp:ListItem></asp:ListItem>
         </asp:DropDownList><br />
-               <asp:DropDownList ID="DropDownList2" CssClass="boxes" runat="server">
+             <asp:DropDownList ID="DropDownList2" CssClass="boxes" runat="server">
             <asp:ListItem>Brand...</asp:ListItem>
             <asp:ListItem></asp:ListItem>
             <asp:ListItem></asp:ListItem>
@@ -31,7 +31,7 @@
             <asp:ListItem></asp:ListItem>
             <asp:ListItem></asp:ListItem>
         </asp:DropDownList><br />
-                <asp:DropDownList ID="DropDownList3" CssClass="boxes" runat="server">
+            <asp:DropDownList ID="DropDownList3" CssClass="boxes" runat="server">
             <asp:ListItem>All Location...</asp:ListItem>
             <asp:ListItem></asp:ListItem>
             <asp:ListItem></asp:ListItem>
@@ -40,10 +40,11 @@
             <asp:ListItem></asp:ListItem>
             <asp:ListItem></asp:ListItem>
         </asp:DropDownList><br />
-        <asp:Label ID="LabelNew" runat="server" Text="New"></asp:Label>
-        <asp:RadioButton ID="RadioButtonNew" runat="server" />
-         <asp:Label ID="LabelUsed" runat="server" Text="Used"></asp:Label>
-        <asp:RadioButton ID="RadioButtonUsed" runat="server" />
+        <asp:Label ID="LabelNew" runat="server" Text="New" ForeColor="White" ></asp:Label>
+        
+        <asp:RadioButton ID="RadioButtonNew" runat="server" GroupName="MeasurementSystem" />
+        <asp:Label ID="LabelUsed" runat="server" Text="Used" ForeColor="White"></asp:Label>
+        <asp:RadioButton ID="RadioButtonUsed" runat="server" GroupName="MeasurementSystem" />
       <button type="button" class="btn btn-default">Search</button>
     </div>
 </asp:Content>
