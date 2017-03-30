@@ -1,11 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="TruckWebSite.MasterPage" %>
-
-
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-
     <%--start declaretion bootstrap--%>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <%--end declaretion bootstrap--%>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
     <link href="App_Themes/StyleSheet/StyleMaterPage.css" type="text/css" rel="stylesheet" />
     <link href="App_Themes/StyleSheet/font-awesome.css" rel="stylesheet" />
@@ -57,8 +54,16 @@
         </div>
         <div id="footerContent">
             <div class="block__content">
-                ©2017 Centennial College.&nbsp; 
+                 
+                <div class="social-icons-block">
+                <i class="fa fa-facebook-official" style="font-size:36px"></i>
+                <i class="fa fa-linkedin-square" style="font-size:36px"></i>
+                <i class="fa fa-tumblr-square" style="font-size:36px"></i>
+                <i class="fa fa-twitter-square" style="font-size:36px"></i>
+                <i class="fa fa-youtube" style="font-size:36px"></i>
+               </div>
             </div>
+           	<p style="left:0px;">&copy;2017 Centennial College.&nbsp; </p>
         </div>
     </form>
 </body>

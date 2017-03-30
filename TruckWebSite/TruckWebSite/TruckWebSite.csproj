@@ -151,6 +151,7 @@
     <Content Include="bin\ru\EntityFramework.resources.dll" />
     <Content Include="bin\TruckWebSite.dll" />
     <Content Include="bin\TruckWebSite.pdb" />
+    <Content Include="CarDetails.aspx" />
     <Content Include="DB\TruckCompanyDB.edmx.sql" />
     <Content Include="DB\TruckCompanyDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -227,6 +228,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarDetails.aspx.cs">
+      <DependentUpon>CarDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CarDetails.aspx.designer.cs">
+      <DependentUpon>CarDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DB\Branche.cs">
       <DependentUpon>TruckCompanyDB.tt</DependentUpon>
     </Compile>
@@ -301,6 +309,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="QueryTest\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
