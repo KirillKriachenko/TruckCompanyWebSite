@@ -9,20 +9,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <%--end declaretion bootstrap--%>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
+    <%--start declaretion CSS FILES--%>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link href="App_Themes/StyleSheet/StyleMaterPage.css" type="text/css" rel="stylesheet" />
     <link href="App_Themes/StyleSheet/font-awesome.css" rel="stylesheet" />
     <link href="App_Themes/StyleSheet/font-awesome.min.css" rel="stylesheet" />
-    <title>Master Page</title>
+    <%--END declaretion CSS FILES--%>
+
+    <%--Page title--%>
+    <title>TRUCK COMPANY</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
+
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server">        
+        <%--HEADER --%>
         <div id="topContent">
             <asp:Image ID="headerimage" runat="server" ImageUrl="~/Pictures/logo.gif" Height="50px" Width="120px" />
         </div>
+        <%-- Nav Bar MENU --%>
         <nav role="navigation" class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -45,16 +52,19 @@
                 </div>
             </div>
         </nav>
+        <%-- Main -CONTENT --%>
         <div id="mainContent">
             <asp:ContentPlaceHolder ID="body" runat="server">
                 <a href="Default.aspx">Main Content</a>
             </asp:ContentPlaceHolder>
+            <%--backgrounds up and botton--%>
             <img src="/Pictures/background.jpg" class="img-rounded" alt="Cinque Terre" />
             <asp:Image ID="Image1" runat="server" ImageUrl="Pictures/trucksBotton.jpg" />
         </div>
+        <%-- FOOTER --%>
         <div id="footerContent">
             <div class="block__content">
-                 
+                <%-- SOCIAL ICONS --%>                             
                 <div class="social-icons-block">
                 <i class="fa fa-facebook-official" style="font-size:36px"></i>
                 <i class="fa fa-linkedin-square" style="font-size:36px"></i>
