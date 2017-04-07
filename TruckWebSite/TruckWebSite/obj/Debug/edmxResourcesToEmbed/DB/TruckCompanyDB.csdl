@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="TruckCompanyDB" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
-  <EntityContainer Name="TruckCompanyDBContainer" annotation:LazyLoadingEnabled="true">
+<Schema Namespace="TruckCompanyDB" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="TruckCompanyDBContainer" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
     <EntitySet Name="CarSet" EntityType="TruckCompanyDB.Car" />
     <EntitySet Name="BrancheSet" EntityType="TruckCompanyDB.Branche" />
     <AssociationSet Name="BrancheCar" Association="TruckCompanyDB.BrancheCar">
@@ -42,13 +42,13 @@
     <Key>
       <PropertyRef Name="CarId" />
     </Key>
-    <Property Name="CarId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CarId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="Type" Type="String" Nullable="false" />
     <Property Name="Brand" Type="String" Nullable="false" />
-    <Property Name="Year" Type="String" Nullable="false" />
-    <Property Name="Kilometrs" Type="String" Nullable="false" />
+    <Property Name="Year" Type="Int32" Nullable="false" />
+    <Property Name="Kilometrs" Type="Decimal" Nullable="false" />
     <Property Name="Plate" Type="String" Nullable="false" />
-    <Property Name="Photo" Type="String" Nullable="false" />
+    <Property Name="Photo" Type="String" Nullable="true" />
     <NavigationProperty Name="Branche" Relationship="TruckCompanyDB.BrancheCar" FromRole="Car" ToRole="Branche" />
     <Property Name="BrancheBrancheId" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Service" Relationship="TruckCompanyDB.ServiceCar" FromRole="Car" ToRole="Service" />
@@ -58,11 +58,11 @@
     <Key>
       <PropertyRef Name="BrancheId" />
     </Key>
-    <Property Name="BrancheId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BrancheId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="Name" Type="String" Nullable="false" />
     <Property Name="Location" Type="String" Nullable="false" />
     <Property Name="Address" Type="String" Nullable="false" />
-    <Property Name="Capacity" Type="String" Nullable="false" />
+    <Property Name="Capacity" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Car" Relationship="TruckCompanyDB.BrancheCar" FromRole="Branche" ToRole="Car" />
     <NavigationProperty Name="Employee" Relationship="TruckCompanyDB.BrancheEmployee" FromRole="Branche" ToRole="Employee" />
   </EntityType>
@@ -82,11 +82,11 @@
     <Key>
       <PropertyRef Name="EmployeeId" />
     </Key>
-    <Property Name="EmployeeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="Name" Type="String" Nullable="false" />
     <Property Name="LastName" Type="String" Nullable="false" />
     <Property Name="Birthday" Type="String" Nullable="false" />
-    <Property Name="PhoneNumber" Type="String" Nullable="false" />
+    <Property Name="PhoneNumber" Type="Int32" Nullable="false" />
     <Property Name="Address" Type="String" Nullable="false" />
     <NavigationProperty Name="Branche" Relationship="TruckCompanyDB.BrancheEmployee" FromRole="Employee" ToRole="Branche" />
     <Property Name="BrancheBrancheId" Type="Int32" Nullable="false" />
@@ -109,10 +109,11 @@
     <Key>
       <PropertyRef Name="ScheduleId" />
     </Key>
-    <Property Name="ScheduleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="WorkTime" Type="String" Nullable="false" />
+    <Property Name="ScheduleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="Date" Type="String" Nullable="false" />
     <NavigationProperty Name="Employee" Relationship="TruckCompanyDB.EmployeeSchedule" FromRole="Schedule" ToRole="Employee" />
+    <Property Name="StartTime" Type="DateTime" Nullable="false" />
+    <Property Name="EndTime" Type="DateTime" Nullable="false" />
   </EntityType>
   <Association Name="EmployeeSchedule">
     <End Type="TruckCompanyDB.Employee" Role="Employee" Multiplicity="1" />
@@ -122,14 +123,14 @@
     <Key>
       <PropertyRef Name="JobId" />
     </Key>
-    <Property Name="JobId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JobId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="JobTitle" Type="String" Nullable="false" />
     <Property Name="Description" Type="String" Nullable="false" />
-    <Property Name="Salary" Type="String" Nullable="false" />
+    <Property Name="Salary" Type="Decimal" Nullable="false" />
     <Property Name="StartDate" Type="String" Nullable="false" />
-    <Property Name="EndDate" Type="String" Nullable="false" />
-    <Property Name="Open" Type="String" Nullable="false" />
+    <Property Name="Open" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="Employee" Relationship="TruckCompanyDB.EmployeeJob" FromRole="Job" ToRole="Employee" />
+    <Property Name="Location" Type="String" Nullable="true" />
   </EntityType>
   <Association Name="EmployeeJob">
     <End Type="TruckCompanyDB.Employee" Role="Employee" Multiplicity="1" />
@@ -139,7 +140,7 @@
     <Key>
       <PropertyRef Name="ServiceId" />
     </Key>
-    <Property Name="ServiceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServiceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="ServieType" Type="String" Nullable="false" />
     <NavigationProperty Name="Car" Relationship="TruckCompanyDB.ServiceCar" FromRole="Service" ToRole="Car" />
     <NavigationProperty Name="ServiceHistory" Relationship="TruckCompanyDB.ServiceServiceHistory" FromRole="Service" ToRole="ServiceHistory" />
@@ -162,8 +163,8 @@
     <Key>
       <PropertyRef Name="ServiceHistoryId" />
     </Key>
-    <Property Name="ServiceHistoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Value" Type="String" Nullable="false" />
+    <Property Name="ServiceHistoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="Value" Type="Decimal" Nullable="false" />
     <Property Name="StartDate" Type="String" Nullable="false" />
     <Property Name="EndDate" Type="String" Nullable="false" />
     <NavigationProperty Name="Service" Relationship="TruckCompanyDB.ServiceServiceHistory" FromRole="ServiceHistory" ToRole="Service" />
@@ -185,11 +186,11 @@
     <Key>
       <PropertyRef Name="CustomerId" />
     </Key>
-    <Property Name="CustomerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="Name" Type="String" Nullable="false" />
     <Property Name="LastName" Type="String" Nullable="false" />
     <Property Name="Birthday" Type="String" Nullable="false" />
-    <Property Name="PhoneNumber" Type="String" Nullable="false" />
+    <Property Name="PhoneNumber" Type="Int32" Nullable="false" />
     <Property Name="Address" Type="String" Nullable="false" />
     <NavigationProperty Name="Service" Relationship="TruckCompanyDB.CustomerService" FromRole="Customer" ToRole="Service" />
   </EntityType>
