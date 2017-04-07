@@ -47,7 +47,7 @@
                         <li><a href="#">Coverage Area</a></li>
                         <li><a href="#">About US</a></li>
                         <li><a href="Pages/JobPage.aspx">Job Oportunities</a></li>
-                        <li><a href="Pages/JobPage.aspx">Contact</a></li>
+                        <li><a href="ContactUs.aspx">Contact</a></li>
                     </ul>
                 </div>
             </div>

@@ -8,20 +8,21 @@
         <%--Title--%>
         <asp:Label ID="LabelBuy" runat="server" CssClass="labels" Text="Buy Your Truck!!!!"></asp:Label><br />
         <%--Plate--%>
-        <asp:DropDownList ID="DropDownList" CssClass="boxes" runat="server" enableViewstate="false" AutoPostBack="false" >
-            <asp:ListItem Value="0">Select...</asp:ListItem>
-        </asp:DropDownList><br />
+        <asp:DropDownList runat="server" ID="DropDownList" CssClass="boxes" AutoPostBack="false"></asp:DropDownList><br />
+       <%-- <asp:DropDownList ID="DropDownList" CssClass="boxes" runat="server" enableViewstate="false" AutoPostBack="false" >
+            <%--<asp:ListItem Value="0">Select...</asp:ListItem>
+        </asp:DropDownList><br />--%>
         <%--Year--%>
-        <asp:DropDownList ID="DropDownList1" CssClass="boxes" runat="server" enableViewstate="false" AutoPostBack="false">
-            <asp:ListItem>Year...</asp:ListItem>
+        <asp:DropDownList ID="DropDownList1" CssClass="boxes" runat="server" AutoPostBack="false">
+            <%--<asp:ListItem>Year...</asp:ListItem>--%>
         </asp:DropDownList><br />
         <%--Brand--%>
-        <asp:DropDownList ID="DropDownList2" CssClass="boxes" runat="server" enableViewstate="false" AutoPostBack="false">
-            <asp:ListItem>Brand...</asp:ListItem>
+        <asp:DropDownList ID="DropDownList2" CssClass="boxes" runat="server"  AutoPostBack="false">
+            <%--<asp:ListItem>Brand...</asp:ListItem>--%>
         </asp:DropDownList><br />
         <%--Location--%>
-        <asp:DropDownList ID="DropDownList3" CssClass="boxes" runat="server" enableViewstate="false" AutoPostBack="false">
-            <asp:ListItem>All Location...</asp:ListItem>
+        <asp:DropDownList ID="DropDownList3" CssClass="boxes" runat="server"  AutoPostBack="false">
+            <%--<asp:ListItem>All Location...</asp:ListItem>--%>
         </asp:DropDownList><br /> 
         <%--choose between new or old truck--%>
         <asp:Label ID="LabelNew" runat="server" Text="New" ForeColor="White"></asp:Label>

@@ -152,6 +152,7 @@
     <Content Include="bin\TruckWebSite.dll" />
     <Content Include="bin\TruckWebSite.pdb" />
     <Content Include="CarDetails.aspx" />
+    <Content Include="ContactUs.aspx" />
     <Content Include="DB\TruckCompanyDB.edmx.sql" />
     <Content Include="DB\TruckCompanyDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -187,6 +188,7 @@
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Pictures\logo.gif" />
     <Content Include="Pictures\trucksBotton.jpg" />
+    <Content Include="QueryTest\SQLQuery1.sql" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.js" />
@@ -234,6 +236,13 @@
     </Compile>
     <Compile Include="CarDetails.aspx.designer.cs">
       <DependentUpon>CarDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
     </Compile>
     <Compile Include="DB\Branche.cs">
       <DependentUpon>TruckCompanyDB.tt</DependentUpon>
@@ -310,9 +319,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="QueryTest\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
