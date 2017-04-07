@@ -117,7 +117,7 @@
     <Content Include="App_Themes\StyleSheet\font-awesome.min.css" />
     <Content Include="App_Themes\StyleSheet\StyleMaterPage.css" />
     <Content Include="Artem.Google.pdb" />
-    <Content Include="Artem.Google.XML" />
+    <Content Include="Pages\Artem.Google.XML" />
     <Content Include="bin\EntityFramework.dll" />
     <Content Include="bin\EntityFramework.SqlServer.dll" />
     <Content Include="bin\EntityFramework.xml" />
@@ -151,8 +151,8 @@
     <Content Include="bin\ru\EntityFramework.resources.dll" />
     <Content Include="bin\TruckWebSite.dll" />
     <Content Include="bin\TruckWebSite.pdb" />
-    <Content Include="CarDetails.aspx" />
-    <Content Include="ContactUs.aspx" />
+    <Content Include="Pages\CarDetails.aspx" />
+    <Content Include="Pages\ContactUs.aspx" />
     <Content Include="DB\TruckCompanyDB.edmx.sql" />
     <Content Include="DB\TruckCompanyDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -187,6 +187,7 @@
     <Content Include="Pictures\DanadaMap2.png" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Pictures\logo.gif" />
+    <Content Include="Pictures\logo2.png" />
     <Content Include="Pictures\trucksBotton.jpg" />
     <Content Include="QueryTest\SQLQuery1.sql" />
     <Content Include="Scripts\jquery-3.1.1.js" />
@@ -230,18 +231,18 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CarDetails.aspx.cs">
+    <Compile Include="Pages\CarDetails.aspx.cs">
       <DependentUpon>CarDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CarDetails.aspx.designer.cs">
+    <Compile Include="Pages\CarDetails.aspx.designer.cs">
       <DependentUpon>CarDetails.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ContactUs.aspx.cs">
+    <Compile Include="Pages\ContactUs.aspx.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ContactUs.aspx.designer.cs">
+    <Compile Include="Pages\ContactUs.aspx.designer.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>
     </Compile>
     <Compile Include="DB\Branche.cs">

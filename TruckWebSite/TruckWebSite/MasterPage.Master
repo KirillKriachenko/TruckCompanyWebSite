@@ -27,7 +27,7 @@
     <form id="form1" runat="server">        
         <%--HEADER --%>
         <div id="topContent">
-            <asp:Image ID="headerimage" runat="server" ImageUrl="~/Pictures/logo.gif" Height="50px" Width="120px" />
+            <asp:Image ID="headerimage" runat="server" ImageUrl="~/Pictures/logo2.png" Height="50px" Width="120px" />
         </div>
         <%-- Nav Bar MENU --%>
         <nav role="navigation" class="navbar navbar-inverse">
@@ -42,12 +42,12 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="../Default.aspx">Home</a></li>
                         <li><a href="#">Solution</a></li>
-                        <li><a href="#">Coverage Area</a></li>
+                        <li><a href="../Pages/Map.aspx">Coverage Area</a></li>
                         <li><a href="#">About US</a></li>
-                        <li><a href="Pages/JobPage.aspx">Job Oportunities</a></li>
-                        <li><a href="ContactUs.aspx">Contact</a></li>
+                        <li><a href="../Pages/JobPage.aspx">Job Oportunities</a></li>
+                        <li><a href="../Pages/ContactUs.aspx">Contact</a></li>
                     </ul>
                 </div>
             </div>
