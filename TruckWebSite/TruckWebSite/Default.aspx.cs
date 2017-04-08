@@ -117,7 +117,7 @@ namespace TruckWebSite
                 (Brand == "VOLKSWAGEN") && (Branche == "TORONTO"))
             {
                 LabelWarnig.Visible = false;
-                Response.Redirect("CarDetails.aspx");
+                Response.Redirect("Pages/CarDetails.aspx");
             }
             else
             {

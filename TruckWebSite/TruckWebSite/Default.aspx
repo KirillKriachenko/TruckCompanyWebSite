@@ -11,9 +11,6 @@
         <asp:DropDownList runat="server" ID="DropDownList" CssClass="boxes" AutoPostBack="false" enableViewstate="true">
             <asp:ListItem>Select...</asp:ListItem>
         </asp:DropDownList><br />
-       <%-- <asp:DropDownList ID="DropDownList" CssClass="boxes" runat="server" enableViewstate="false" AutoPostBack="false" >
-            <%--<asp:ListItem Value="0">Select...</asp:ListItem>
-        </asp:DropDownList><br />--%>
         <%--Year--%>
         <asp:DropDownList ID="DropDownList1" CssClass="boxes" runat="server" AutoPostBack="false" enableViewstate="true">
             <asp:ListItem>Year...</asp:ListItem>

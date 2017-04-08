@@ -13,22 +13,31 @@ namespace TruckWebSite {
     public partial class ContactUs {
         
         /// <summary>
-        /// dbErrorMessage control.
+        /// LabelContact control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label dbErrorMessage;
+        protected global::System.Web.UI.WebControls.Label LabelContact;
         
         /// <summary>
-        /// nameTextBox control.
+        /// textboxname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nameTextBox;
+        protected global::System.Web.UI.WebControls.TextBox textboxname;
+        
+        /// <summary>
+        /// subjectTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox subjectTextBox;
         
         /// <summary>
         /// emailTextBox control.
