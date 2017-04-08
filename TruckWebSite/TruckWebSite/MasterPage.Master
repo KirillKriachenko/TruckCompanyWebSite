@@ -38,14 +38,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="#" class="navbar-brand">Truck Company S.A.</a>
+                    <a href="../Default.aspx" class="navbar-brand">Truck Company S.A.</a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
                         <li><a href="../Default.aspx">Home</a></li>
                         <li><a href="#">Solution</a></li>
                         <li><a href="../Pages/Map.aspx">Coverage Area</a></li>
-                        <li><a href="#">About US</a></li>
+                        <li><a href="../Pages/AboutUS.aspx">About US</a></li>
                         <li><a href="../Pages/JobPage.aspx">Job Oportunities</a></li>
                         <li><a href="../Pages/ContactUs.aspx">Contact</a></li>
                     </ul>

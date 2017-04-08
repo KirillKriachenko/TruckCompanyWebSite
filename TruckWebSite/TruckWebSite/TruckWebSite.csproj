@@ -117,6 +117,7 @@
     <Content Include="App_Themes\StyleSheet\font-awesome.min.css" />
     <Content Include="App_Themes\StyleSheet\StyleMaterPage.css" />
     <Content Include="Artem.Google.pdb" />
+    <Content Include="Pages\AboutUS.aspx" />
     <Content Include="Pages\Artem.Google.XML" />
     <Content Include="bin\EntityFramework.dll" />
     <Content Include="bin\EntityFramework.SqlServer.dll" />
@@ -186,8 +187,8 @@
     <Content Include="Pictures\DanadaMap.png" />
     <Content Include="Pictures\DanadaMap2.png" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
-    <Content Include="Pictures\logo.gif" />
     <Content Include="Pictures\logo2.png" />
+    <Content Include="Pictures\truck-Photo.png" />
     <Content Include="Pictures\trucksBotton.jpg" />
     <Content Include="QueryTest\SQLQuery1.sql" />
     <Content Include="Scripts\jquery-3.1.1.js" />
@@ -231,6 +232,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\AboutUS.aspx.cs">
+      <DependentUpon>AboutUS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AboutUS.aspx.designer.cs">
+      <DependentUpon>AboutUS.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\CarDetails.aspx.cs">
       <DependentUpon>CarDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -24,7 +24,7 @@ namespace TruckWebSite
                 MailMessage mailMessage = new MailMessage();
                 mailMessage.To.Add("fabiociconi@yahoo.com.br");
                 mailMessage.From = new MailAddress(emailTextBox.Text);
-                mailMessage.Subject = nameTextBox.Text; 
+                mailMessage.Subject = subjectTextBox.Text; 
                 mailMessage.Body = descriptionTextBox.Text;
                 SmtpClient smtpClient = new SmtpClient("smtp.mail.yahoo.com.br");
                 smtpClient.Port = 587;

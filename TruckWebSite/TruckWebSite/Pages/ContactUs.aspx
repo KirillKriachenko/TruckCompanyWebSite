@@ -3,16 +3,22 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
-    <div>
-        <h1>Contact US</h1>
-        <asp:Label ID="dbErrorMessage" ForeColor="Red" runat="server" />
+    
+         <div id="Miniform">
+        
+        <asp:Label ID="LabelContact" runat="server" CssClass="labels" Text="Contact US"></asp:Label><br />
         <p>
-            Name:<br />
-            <asp:TextBox ID="nameTextBox" runat="server" CssClass="textbox" />
+            <span class="labelsform">Name: </span><br />
+            <asp:TextBox ID="textboxname" runat="server" CssClass="form-control"/>
         </p>
         <p>
-            Email:<br />
-            <asp:TextBox ID="emailTextBox" runat="server" CssClass="textbox" />
+            <span class="labelsform">Subject: </span><br />
+            <asp:TextBox ID="subjectTextBox" runat="server" CssClass="form-control" />
+        </p>
+        <p>
+           
+            <span class="labelsform">Email*: </span><br />
+            <asp:TextBox ID="emailTextBox" runat="server" CssClass="form-control" />
             <asp:RegularExpressionValidator ID="valRegEx" runat="server"
                 ControlToValidate="emailTextBox"
                 ValidationExpression=".*@.*\..*"
@@ -22,16 +28,17 @@
                 ControlToValidate="emailTextBox"></asp:RequiredFieldValidator>
         </p>
         <p>
-            Description:<br />
+
+            <span class="labelsform"> Description*:</span><br />
             <asp:TextBox ID="descriptionTextBox" runat="server" CssClass="textbox" Columns="40" Rows="4" TextMode="MultiLine" />
             <asp:RequiredFieldValidator ID="descriptionReq" runat="server" ControlToValidate="descriptionTextBox" ErrorMessage="<br />You must enter a description!" Display="None" />
         </p>
         <p>
-            <asp:Button ID="submitButton" runat="server" CssClass="button" Text="Submit Request" OnClick="submitButton_Click" />
+            <asp:Button ID="submitButton" runat="server" CssClass="btn-default" Text="Submit Request" OnClick="submitButton_Click" />
         </p>
 
         <p>
-            <asp:Label ID="labelError" runat="server" CssClass="alert-info" Visible="false"></asp:Label>
+            <asp:Label ID="labelError" runat="server" CssClass="btn btn-default" Visible="false"></asp:Label>
         </p>
     </div>
 
